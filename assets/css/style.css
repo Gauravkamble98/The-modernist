@@ -1,0 +1,767 @@
+@charset "utf-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a { 
+  display: inline-block;
+  text-decoration: none; 
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1360px;
+  width: 86%; 
+  margin: 0 auto;
+}
+/*=================================
+  Header styling starts here
+=================================*/
+
+header {
+  background-color:#2B0305;
+  border-top: 6px solid #7ec48d;
+}
+
+header .wrapper{
+    display: flex;
+    background-color:#2B0305;
+    justify-content: space-between;
+    text-align: center;
+    align-content: center;
+}
+
+header h1 {
+    margin-top: 40px;
+   font-size: 29px;
+   font-weight: 500;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: white;
+   line-height: 20px;
+}
+
+ header h1 a{
+    color: white;
+    margin-left: 5px;
+  }
+
+ header h1 span{
+    display: block;
+    color: white;
+    font-size: 10px;
+    font-weight: 400;
+    margin-bottom: 40px;
+  } 
+
+/* navbar section */
+nav { padding-top: 40px; }
+
+.navbar  li a{
+    padding: 10px 16px;
+    margin-right: 10px;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(224, 224, 224, 0.952);
+    border-radius: 8px;
+    text-align: center;
+}
+
+ .navbar li a:hover { background-color:  #7EC48D; }
+ .navbar li .last { margin-right: 0; }
+
+ .navbar li a.active {
+   background-color:  #7EC48D;
+   border-radius: 15px;
+}
+
+label #sign-one,
+label #sign-two{
+font-size: 30px;
+color: #fff;
+float: right;
+line-height: 28px;
+margin-right: 5px;
+cursor: pointer;
+display: none;
+}
+
+#res-menu { display: none; }
+
+/*=================================
+  Header styling ends here
+=================================*/  
+
+/*=================================
+  main styling starts here
+=================================*/
+ /* banner section start */
+ .banner-section{
+  background-color:#2b0305;
+  padding: 50px 0;
+}
+
+.banner-section .wrapper { position: relative; }
+
+.arrow-prev a{
+   position: absolute;
+   top:220px;
+   font-size: 30px;
+   font-weight: bold;
+   color: #7ec48d;
+}
+
+.arrow-prev a:hover { color: #fff; }
+
+.arrow-next a{
+ position: absolute;
+ top:220px;
+ right: 0;
+ font-size: 30px;
+ font-weight: bold;
+ color: #7ec48d;
+}
+
+.arrow-next a:hover { color: #fff; }
+
+.active-slide{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.slide { display: none; }
+
+.banner-heading{
+   text-align: start;
+   width: 33%;
+   margin: 40px;
+}
+
+.banner-heading h2{
+   text-align: start;
+   font-size: 50px;
+   font-weight: bold;
+   line-height: 60px;
+   color: white;
+}
+
+.banner-heading p{
+   text-align: justify;
+   margin: 48px 0;
+   font-size: 17px;
+   color: grey;
+}
+
+.banner-heading a{
+   text-align: start;
+   background: #7ec48d;
+   color: white;
+   padding: 10px 12px;
+   border-radius: 10px;
+}
+
+.banner-heading a:hover{
+   color: #7ec48d;
+   background-color: #fff;
+   border: 2px solid #1FB57B;
+}
+
+.Banner-img { width: 40%; }
+
+.Banner-img img{
+   border: 25px solid rgb(95, 92, 92);
+   border-radius: 263px;
+   margin-top: -40px;
+}
+/* banner section done  */
+
+/* service section */
+.Service-section{
+   background-color: #61080b;
+   padding-top: 101px;
+}
+
+.services-content{
+   display: flex;
+   justify-content: space-between;
+}
+
+.content1{
+   background-color: white;
+   width: 23%;
+   text-align: center;
+   margin-bottom: 28px;
+}
+
+.content1:hover{
+ background-color: #7ec48d;
+ color: #fff;
+ cursor: pointer;
+}
+
+.content1 img{
+   width: 48%;
+   margin-top: 26px;
+}
+
+.content1 h3{
+   text-align: center;
+   margin-top: 22px;
+   font-size: 37px;
+   font-weight: 600;
+}
+
+.content1 p{
+   margin: 38px 0 28px 0;
+   text-align: center;
+}
+/* services section done  */
+
+/* work section start */
+.Work-section{ background-color: #61080b; }
+
+.Work-section  h3 {
+   padding-top: 13px;
+   color: white;
+   text-align: center;
+   font-size: 30px;
+   font-weight: bold;
+}
+
+.Work-section h3 span{
+   padding: 10px 5px;
+   border-radius: 15px;
+   background: #1FB57B;
+}
+
+.work-content{
+   margin-top: 20px;
+   display: grid;
+   grid-template-columns: 350px 350px 350px;
+   grid-gap: 30px;
+   padding: 20px 0 59px 0;
+}
+
+.content2 { border: 8px solid white; }
+
+.content2 p{
+ background-color: black;
+ color: white;
+ text-align: center;
+ font-size: 20px;
+ padding: 5px;
+ font-weight: 500;
+}
+
+/* contact section start */
+.Contact-section{
+   background-color: #333333;
+   padding-bottom: 63px;
+}
+
+.contact-content{
+   display: flex;
+   justify-content: space-between;
+}
+
+.content3{
+ margin-top: 42px;
+ width: 23%;
+}
+
+.quick-links{
+ margin-top: 42px;
+ width: 23%;
+}
+
+.quick-links .head {
+ font-size: 25px;
+ font-weight: bold;
+ border: none;
+ margin-top: 5px;
+ color: white;
+}
+
+.quick-links li{
+ display: block;
+ border-bottom: 1px solid #1FB57B;
+ padding-bottom: 4px;
+ margin-top: 15px;
+}
+
+.quick-links li a { color: #7ec48d; }
+
+.quick-links li a:hover { color: #fff; }
+
+.content3 li{
+   display: block;
+   margin-top: 15px;
+}
+
+.post { margin-top: 43px; } 
+
+.content3 h4{
+   font-size: 25px;
+   font-weight: bold;
+   margin-top: 5px;
+   color: white;
+}
+
+.content3 ul{
+   font-size: 20px;
+   font-weight: 530;
+}
+
+ul li a { color: rgba(173, 173, 173, 0.726); }
+li .color { color:#1FB57B; }
+li .color:hover { color: #fff; } 
+
+.content3 p{
+   margin-top: 15px;
+   font-size: 17px;
+   color: rgba(173, 173, 173, 0.726);
+}
+
+.content3 span { color:#1FB57B; }
+.content3 .contact-box { line-height: 40px; }
+
+.form-group  {
+   margin-top: 10px;
+   border-radius: 10px;
+}
+
+.form-group input{
+   background-color: rgb(15, 15, 15);
+   width: 226px;
+   height: 36px;
+   border: none;
+   border-radius: 10px;
+}
+
+.form-group textarea{
+   background-color: rgb(15, 15, 15);
+   width: 226px;
+   height: 67px;
+   border: none;
+   border-radius: 10px;
+}
+
+.form-group1 a{
+   background-color:#7ec48d; 
+   font-size: 18px;
+   padding: 16px 22px;
+   margin-top: 13px;
+   border-radius: 15px;
+   color: rgb(48, 47, 47);
+}
+
+.form-group1 a:hover{
+   border: 1px solid #1FB57B;
+  background-color: #fff;
+  color: #7ec48d;
+}
+/*=================================
+  main styling ends here
+=================================*/
+
+/*=================================
+  footer styling starts here
+=================================*/ 
+footer {
+  border-top: 1px solid black;
+  background-color: #333333;
+  padding: 27px 0 27px;
+}
+
+footer .wrapper{
+ display: flex;
+ justify-content: space-between;
+}
+
+.f-head1{
+  color: rgb(153, 149, 149);
+  font-size: 17px;
+}
+
+.f-head2{
+  font-size: 17px;
+  color: rgb(153, 149, 149);
+}
+
+ /*=================================
+  footer styling ends here
+=================================*/ 
+
+/*media query starts*/
+/*media query for 995px starts here*/
+@media screen and (max-width: 1024px) {
+  .navbar  li a{
+      padding: 10px 8px;
+      margin-right: 8px;
+      font-weight: 500;
+  }
+
+  header h1 a { margin-left: 0px; } }
+
+@media screen and (max-width: 768px) {
+  header .wrapper { justify-content: space-between; }
+  label #sign-one { display: block; }
+
+   nav ul{
+     position: fixed;
+     width: 100%;
+     height: 100vh;
+     background: #2B0305;
+     top: 135px;
+     left: -180%;
+     text-align: center;
+     transition: .5s;
+     z-index: 10;
+   }
+ 
+   nav ul li{
+     display: block;
+     margin: 32px 0;
+     line-height: 30px;
+   }
+
+   .navbar  li a{
+      padding: 10px 16px;
+      margin-right: 0;
+      letter-spacing: 1px;
+      font-size: 15px;
+      font-weight: 600;
+      color: rgba(224, 224, 224, 0.952);
+      border-radius: 8px;
+      text-align: center;
+  }
+ 
+   nav ul li { float: none; }
+   nav ul li a { font-size: 15px; }
+   #res-menu:checked ~ ul { left: 0; }
+   #res-menu:checked ~ label #sign-one { display: none; }
+   #res-menu:checked ~ label #sign-two { display: block; }
+  .navbar { margin-left: 0;}
+  .navbar a:hover { color: #fff; }
+}
+@media screen and (max-width: 425px) {
+  nav ul li{
+      display: block;
+      margin: 11px 0;
+      line-height: 30px;
+    }
+  }
+
+/* banner section start  */
+@media screen and (max-width: 1024px) {
+  .Banner-img { width:32%; }
+  .Banner-img img { margin-top: -2px; }
+
+  .banner-heading {
+      text-align: start;
+      width: 29%;
+      margin: 40px;
+  }
+
+  .banner-heading h2 {
+      font-size: 38px;
+      line-height: 48px;
+  }
+  
+  .banner-heading p {
+      margin: 31px 0;
+      font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner-section {
+      background-color: #2b0305;
+      padding: 20px 0;
+  }
+
+  .banner-heading h2 {
+      font-size: 29px;
+      line-height: 37px;
+  }
+
+  .banner-heading p {
+      margin: 25px 0;
+      font-size: 15px;
+  }
+
+  .arrow-prev a {
+      position: absolute;
+      top: 173px;
+  }
+
+  .arrow-next a {
+      position: absolute;
+      top: 174px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .banner-section { padding: 16px 0; }
+  .active-slide { flex-direction: column; }
+
+  .banner-heading {
+      text-align: start;
+      width: 80%;
+      margin: 29px;
+  }
+
+  .Banner-img {
+      width: 34%;
+      text-align: center;
+      margin-left: 95px;
+  }
+}
+
+  @media screen and (max-width: 375px) {
+      .banner-heading h2 {
+          font-size: 26px;
+          line-height: 33px;
+          text-align: center;
+      }
+
+      .banner-heading p {
+          margin: 21px 0;
+          font-size: 15px;
+      }
+
+      .Banner-img { margin-left: 70px; } }
+/* banner css done  */
+
+/* service section start  */
+@media screen and (max-width: 1024px) {
+  .content1 h3 {
+      margin-top: 20px;
+      font-size: 31px;
+  }
+
+  .content1 p {
+      margin: 16px 0 28px 0;
+      text-align: center;
+      font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Service-section {
+      background-color: #61080b;
+      padding-top: 54px;
+  }
+
+  .content1 h3 {
+      margin-top: 19px;
+      font-size: 23px;
+  }
+
+  .content1 p {
+      margin: 13px 0 19px 0;
+      text-align: center;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .services-content {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+  }
+
+  .content1 {
+      background-color: white;
+      width: 100%;
+  }
+
+  .content1 img {
+      width: 28%;
+      margin-top: 16px;
+  }
+
+  .Service-section {
+      background-color: #61080b;
+      padding-top: 31px;
+  }
+
+  .content1 h3 {
+      margin-top: 19px;
+      font-size: 21px;
+  }
+}
+/* services section done  */
+
+/* work section start  */
+@media screen and (max-width: 1024px) {
+  .Work-section h3 { font-size: 23px; }
+  .work-content { grid-template-columns: 270px 270px 270px; } }
+
+@media screen and (max-width: 768px) {
+.Work-section h3 { font-size: 19px; }
+.work-content { grid-template-columns: 200px 200px 200px; }
+.content2 p { font-size: 15px; }
+}
+
+@media screen and (max-width: 425px) {
+.work-content { grid-template-columns: 170px 170px; }
+.content2 p { font-size: 10px; }
+}
+
+@media screen and (max-width: 375px) {
+  .work-content{
+      display: flex;
+      flex-direction: column;
+      padding: 20px 0 39px 0;
+  }
+}
+/* work section done  */
+
+/* contact section start  */
+@media screen and (max-width: 1024px) {
+  .content3 {
+      margin-top: 24px;
+      width: 20%;
+  }
+
+  .quick-links {
+      margin-top: 35px;
+      width: 19%;
+  }
+
+  .content3 p {
+      margin-top: 15px;
+      font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .contact-content{
+     flex-direction: column;
+     text-align: center;
+  }
+
+  .content3 {
+      margin-top: 24px;
+      width: 100%;
+  }
+
+  .quick-links {
+      margin-top: 35px;
+      width: 100%;
+  }
+
+  .Contact-section { padding-bottom: 35px; }
+}
+/* contact section done  */
+
+/* footer section start  */
+@media screen and (max-width: 425px){
+  footer { padding: 23px 0 22px; }
+
+  footer .wrapper {
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  .f-head1 {
+      font-size:15px;
+      text-align: center;
+  }
+
+  .f-head2 {
+      font-size: 15px;
+      text-align: center;
+      margin-top: 15px;
+  }
+}
